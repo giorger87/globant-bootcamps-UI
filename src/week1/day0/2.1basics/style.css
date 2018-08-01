@@ -1,5 +1,8 @@
 @import "compass/css3";
-
+*{
+    font-family:Arial, Helvetica, sans-serif; 
+    font-weight: 600;
+}
 .container{
     list-style: none;
     margin: 0; 
@@ -8,18 +11,20 @@
     background-color: blue;
     flex-direction: row;
     justify-content: flex-end;
-    
+    padding: 20px;
     
 }
 .container a { 
+    
     text-align: center; 
     padding: 20px;
-    border: 3px solid blue;
+    border-right: 5px solid blue;
     font-size: 15px;
 }
    
 .item{
-    background-color: seagreen;
+    
+    background-color: rgb(7, 141, 29);
     padding-top: 2%;
     padding-bottom: 2%;
   }
@@ -34,6 +39,7 @@
 }
 .content{
     font-size: 14px;
+    background-color: magenta;
 }
 .navigation{
     font-size: 12px;
