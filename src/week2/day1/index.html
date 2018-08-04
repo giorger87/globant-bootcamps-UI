@@ -1,14 +1,24 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
 <script>
-    var Animal = (function(type) {
-        this.type = type;
-    });
+    class Animal{
+        constructor(type){
+            this.type= type;
+        }
+        
+        get Type(){
+            return this.type;
+        }
+        set Type(value){
+            this.type= value;
+        }
 
+        
+}
     Animal.prototype.talk = function() {
-        console.log(`Hi, I'm an Animal, but also a ${this.type}`);
+        console.log(`Hi, I'm an Animal, but also a ${this.Type}`);
     };
-
+    
     let rabbit = new Animal("Rabbit");
     rabbit.talk();
 </script>
