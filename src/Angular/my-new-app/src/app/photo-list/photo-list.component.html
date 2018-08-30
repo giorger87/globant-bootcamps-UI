@@ -1,13 +1,13 @@
 <!--ACA SOLO VAN LAS FOTOS POR ESO SE LLAMA PHOTO LIST-->
 		<h3>holis </h3>
 
-<ul *ngIf="localPhotos" class="list">
-    <li *ngFor="let p of localPhotos.photos" class="photo">
+<ng-container *ngIf="localPhotos" class="list">
+    <ng-container *ngFor="let p of localPhotos.photos" class="photo">
       <a routerLink="/img-detail:{{p.id}}">
-        <span>{{p.id}}id</span> {{p.name}}nombre
+        
         <img src = {{p.img_src}}/>
       </a>
-    </li>
-  </ul>
+    </ng-container>
+</ng-container>
 
 <button (click)="control()">foto??</button>
