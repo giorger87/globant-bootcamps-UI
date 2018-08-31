@@ -3,7 +3,7 @@
 
 <ng-container *ngIf="localPhotos" class="list">
     <ng-container *ngFor="let p of localPhotos.photos" class="photo">
-      <a routerLink="/img-detail:{{p.id}}">
+      <a routerLink="/img-detail/{{p.id}}">
         
         <img src = {{p.img_src}}/>
       </a>

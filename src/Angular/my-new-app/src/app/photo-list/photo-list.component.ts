@@ -7,9 +7,7 @@ import { Rover } from '../rover';
 })
 export class PhotoListComponent implements OnInit {
   @Input() localPhotos;
-
   constructor() {
-
 
   }
   control() {
@@ -18,6 +16,8 @@ export class PhotoListComponent implements OnInit {
   }
   ngOnInit() {
 
+
   }
 
 }
+
