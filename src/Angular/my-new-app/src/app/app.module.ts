@@ -10,6 +10,8 @@ import { RoverComponent } from './rover/rover.component';
 import { FormsModule } from '@angular/forms';
 import { CamPipePipe } from './cam-pipe.pipe';
 import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepickerModule, MatFormFieldModule, MatNativeDateModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,10 @@ import { HomeComponent } from './home/home.component';
     HttpModule,
     HttpClientModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
     FormsModule
   ],
   providers: [],

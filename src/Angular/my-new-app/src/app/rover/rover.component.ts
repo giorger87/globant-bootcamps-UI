@@ -27,12 +27,17 @@ export class RoverComponent implements OnInit {
   consoleprint(data) {
     console.log(data);
   }
+  formatDate(oldDate: string): string {
+    const re = /\//gi;
+    return oldDate.replace(re, '-');
+  }
   getRoverPics(rover: string,
     date: string,
     camera: string,
     date_type: string) {
       console.log(rover);
       console.log(date);
+      console.log(this.formatDate(date));
       console.log(camera.toLocaleLowerCase());
       console.log(date_type);
       this.marsPhotos.getPicsByDate(rover, date, camera, date_type)

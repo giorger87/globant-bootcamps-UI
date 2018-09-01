@@ -1,7 +1,10 @@
 list{
+  display: flex;
   flex-direction: row;
   list-style: none;
+  flex-flow: row wrap;
 }
+
 img {
     height: 200px;
     width: 200px;
@@ -9,6 +12,14 @@ img {
     border: 5px solid rgb(187, 109, 8);
   }
   
-  .photo {
-    object-fit: cover;
-  }
+
+.box{
+
+  width: 250px;
+}
+.imgfoot{
+  width: 100px;
+  margin: 0px;
+  padding: 0%;
+  text-align: center;
+}
