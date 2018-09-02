@@ -1,7 +1,7 @@
-<h2> Photo Gallery</h2>
+
 <ng-container>
   <h1>{{rover.name}} Rover</h1>
-  <span> {{rover.camera | camPipe}}</span>
+  <div> {{rover.camera | camPipe}}</div>
   <div>
     select Camera
     <select [(ngModel)]="rover.camera">
@@ -9,7 +9,7 @@
       <option *ngFor="let c of rover.cameras">{{c}}</option>
 
     </select>
-<input type="number" name="ca" id="p">
+
     <span> select Date Type
       <select [(ngModel)]='rover.datetype'>
         <option [ngValue]='earth_date'>Earth Date (yyyy-mm-dd)</option>
@@ -19,13 +19,9 @@
     </span>
 
     date:
-    <input type="text" [(ngModel)]='rover.date' placeholder="Choose date" >
+    <app-date-switch [typeselection]='rover.datetype'></app-date-switch>
     <button (click)="getRoverPics(rover.name, rover.date, rover.camera, rover.datetype)">get photos</button>
   </div>
-  
-    <input matInput [matDatepicker]="picker" [(ngModel)]='rover.date' placeholder="Choose a date">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
   
   <app-photo-list [localPhotos]=photos></app-photo-list>
 </ng-container>

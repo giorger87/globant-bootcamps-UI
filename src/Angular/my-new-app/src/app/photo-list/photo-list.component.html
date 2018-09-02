@@ -1,4 +1,5 @@
-<!--ACA SOLO VAN LAS FOTOS POR ESO SE LLAMA PHOTO LIST-->
+<!--ACA SOLO VAN LAS FOTOS POR ESO SE LLAMA PHOTO LIST
+agregar clase photo del dia!!!-->
 <h3>holis </h3>
 
 <ng-container *ngIf="localPhotos">
@@ -6,9 +7,10 @@
     <ng-container class="item">
       <ng-container class= "box"> <a routerLink="/img-detail/{{p.id}}">
 
-          <img src= {{p.img_src}}/></a>
-        <span class="imgfoot">{{p.camera.full_name}}</span>
-      </ng-container>
+          <img id="pic" src= {{p.img_src}} alt="mars photo"/></a>
+          
+        <label for="pic" class="imgfoot">{{p.camera.full_name}}</label>
+      </ng-container> 
     </ng-container>
   </ng-container>
 </ng-container>
