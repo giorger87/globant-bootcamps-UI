@@ -5,7 +5,6 @@ import { Observable } from 'rxjs/Observable';
 import { Rover, rovers } from '../rover';
 import { CamPipePipe } from '../cam-pipe.pipe';
 
-import { DateSwitchComponent } from '../date-switch/date-switch.component';
 @Component({
   selector: 'app-rover',
   templateUrl: './rover.component.html',
@@ -20,7 +19,6 @@ export class RoverComponent implements OnInit {
  // rovers = rovers;
   earth_date = 'earth_date';
   sol = 'sol';
-  dTypeSelection = DateSwitchComponent;
   constructor(private marsPhotos: MarsApiPhotosService) {
 
 
@@ -39,7 +37,6 @@ export class RoverComponent implements OnInit {
     date_type: string) {
       console.log(rover);
       console.log(date);
-      console.log(this.formatDate(date));
       console.log(camera.toLocaleLowerCase());
       console.log(date_type);
       this.marsPhotos.getPicsByDate(rover, date, camera, date_type)

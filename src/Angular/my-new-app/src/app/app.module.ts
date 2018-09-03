@@ -12,7 +12,7 @@ import { CamPipePipe } from './cam-pipe.pipe';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule, MatFormFieldModule, MatNativeDateModule } from '@angular/material';
-import { DateSwitchComponent } from './date-switch/date-switch.component';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +21,7 @@ import { DateSwitchComponent } from './date-switch/date-switch.component';
     ImageDetailComponent,
     RoverComponent,
     CamPipePipe,
-    HomeComponent,
-    DateSwitchComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

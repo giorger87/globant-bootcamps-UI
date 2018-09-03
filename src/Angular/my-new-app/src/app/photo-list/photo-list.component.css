@@ -4,22 +4,26 @@ list{
   list-style: none;
   flex-flow: row wrap;
 }
-
+list > item{
+  width: 210px;
+  height: 200px;
+}
 img {
+
     height: 200px;
     width: 200px;
-    padding: 1em;
+    padding: 2px;
     border: 5px solid rgb(187, 109, 8);
   }
   
 
 .box{
 
-  width: 250px;
 }
 .imgfoot{
   width: 100px;
   margin: 0px;
   padding: 0%;
   text-align: center;
+  color: red;
 }

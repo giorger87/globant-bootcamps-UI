@@ -19,12 +19,18 @@
     </span>
 
     date:
-    <app-date-switch [typeselection]='rover.datetype'></app-date-switch>
+    <ng-container *ngIf="rover.datetype" [ngSwitch]= "rover.datetype">
+
+      <input *ngSwitchCase="'sol'" type="number" [(ngModel)]='rover.date' placeholder="Choose date in Sols" >
+      <input *ngSwitchCase="'earth_date'" type="date" [(ngModel)]='rover.date' placeholder="Choose a date">
+    
+      </ng-container>
+      
+    <!--<app-date-switch [typeselection]='rover.datetype'></app-date-switch>-->
     <button (click)="getRoverPics(rover.name, rover.date, rover.camera, rover.datetype)">get photos</button>
   </div>
   
   <app-photo-list [localPhotos]=photos></app-photo-list>
 </ng-container>
 
-<!--agregar la validacion para cargar las fotos,
- el imput de numeros para SolDate y el calendario para la EarthDate-->
+<!--agregar la validacion para cargar las fotos-->
