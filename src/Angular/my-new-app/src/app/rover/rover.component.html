@@ -2,15 +2,15 @@
 <ng-container>
   <h1>{{rover.name}} Rover</h1>
   <div> {{rover.camera | camPipe}}</div>
-  <div>
-    select Camera
+  <div class="roverform">
+    <label>select Camera </label>
     <select [(ngModel)]="rover.camera">
 
       <option *ngFor="let c of rover.cameras">{{c}}</option>
 
     </select>
 
-    <span> select Date Type
+    <span> <label>select Date</label>
       <select [(ngModel)]='rover.datetype'>
         <option [ngValue]='earth_date'>Earth Date (yyyy-mm-dd)</option>
         <option [ngValue]='sol'>Mars Date (sol)</option>
@@ -24,10 +24,10 @@
       <input *ngSwitchCase="'sol'" type="number" [(ngModel)]='rover.date' placeholder="Choose date in Sols" >
       <input *ngSwitchCase="'earth_date'" type="date" [(ngModel)]='rover.date' placeholder="Choose a date">
     
-      </ng-container>
+    </ng-container>
       
-    <!--<app-date-switch [typeselection]='rover.datetype'></app-date-switch>-->
-    <button (click)="getRoverPics(rover.name, rover.date, rover.camera, rover.datetype)">get photos</button>
+    
+    <button class="btn" (click)="getRoverPics(rover.name, rover.date, rover.camera, rover.datetype)">get photos</button>
   </div>
   
   <app-photo-list [localPhotos]=photos></app-photo-list>

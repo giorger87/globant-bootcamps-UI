@@ -1,4 +1,21 @@
 h1{
     color: rgb(224, 71, 19);
-    
+    margin: 10px;
+}
+.roverform{
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(230, 147, 23, 0.692);
+    border: 5px, solid, black;
+}
+.btn{
+    background-color: rgb(255, 81, 0);
+    text-emphasis: e;
+    font-weight: 500;
+  
+}
+.btn:hover {
+    color: #039be5;
+    background-color: #cfd8dc;
 }

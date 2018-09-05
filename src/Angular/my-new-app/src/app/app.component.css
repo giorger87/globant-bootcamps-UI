@@ -1,11 +1,12 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
-    
-}
+    }
 h1{
     margin: 0%;
     padding: 0%;
     border-width: 0px;
+    font-weight: 600;
+    
 }
 li{
     list-style: none;
@@ -38,6 +39,9 @@ nav button:hover {
     color: #039be5;
     background-color: #cfd8dc;
 }
-nav div {
-
-}
+.banner{
+    height:25em; background-size:cover; width:auto;
+    background-image:url('https://www.science.org.au/curious/sites/default/files/article-banner-image/2-mars-banner.jpg');
+    background-position:100% 5%;
+    color: rgb(255, 38, 0);
+  }

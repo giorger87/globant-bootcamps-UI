@@ -1,19 +1,21 @@
 <!--ACA SOLO VAN LAS FOTOS POR ESO SE LLAMA PHOTO LIST
 agregar clase photo del dia!!!-->
-<h3>holis </h3>
 
 <ng-container *ngIf="localPhotos">
   <ng-container class="list" *ngFor="let p of localPhotos.photos">
-    <ng-container class="item">
+    <ng-container class="column">
       
-        
-           <a routerLink="/img-detail/{{p.id}}"><img id="pic" src={{p.img_src}} alt="mars photo" />
-          </a>
-          <label for="pic" class="imgfoot">{{p.camera.full_name}}</label>
-         
-
-
+      
+        <figure class="figure">
+            <a routerLink="/img-detail/{{p.id}}">
+            <img src={{p.img_src}} class="figure-img img-fluid rounded" alt="Mars picture"></a>
+            <figcaption class="figure-caption">
+              {{p.earth_date}}
+            </figcaption>
+          </figure>
+       
+      
     </ng-container>
   </ng-container>
 </ng-container>
-<ng-container *ngIf="!localPhotos"> no photos to display, maybe if you try other date? </ng-container>
+<ng-container  *ngIf="!localPhotos"> <label class="nophotos"> no photos to display, maybe if you try other date?</label> </ng-container>

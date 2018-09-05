@@ -1,25 +1,35 @@
-list{
+.list{
   display: flex;
   flex-direction: row;
   list-style: none;
   flex-flow: row wrap;
+  
 }
-list > item{
+.list > .item{
+  margin: 0%;
+  padding: 0%;
+  border: 5px, solid, black;
+  display:list-item;
+  list-style: none;
   width: 210px;
   height: 200px;
+  background-color: blue;
+  box-sizing: border-box;
 }
 img {
-
+    
+    margin: 2px;
     height: 200px;
     width: 200px;
-    padding: 2px;
-    border: 5px solid rgb(187, 109, 8);
+    padding: 5px;
+    border: 2px solid rgb(187, 109, 8);
   }
-  
+.nophotos{
+  padding: 5px;
+  margin: 20px;
+}  
 
-.box{
 
-}
 .imgfoot{
   width: 100px;
   margin: 0px;
